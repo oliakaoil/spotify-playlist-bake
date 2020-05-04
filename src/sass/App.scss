@@ -1,0 +1,120 @@
+@import '~tachyons/css/tachyons.css';
+
+$light-green: #7CD69E;
+$light-gray: #eee;
+$light-blue: #33C3F0;
+$white: #ffffff;
+$red: #FF4136;
+
+@mixin border-radius($size) {
+    -webkit-border-radius: #{$size}px;
+    -moz-border-radius: #{$size}px;
+    border-radius: #{$size}px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+div#root {
+    height: 100%;
+}
+
+header {
+    background-color: $light-green;
+
+    .spotify-logo {
+        width: 150px;
+        height: 45px;
+        background-image: url(/images/spotify-logo-white.png);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+.card {
+    @include border-radius(4);
+    border: 1px solid $light-gray;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .header {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .description {
+        margin-bottom: 2rem;
+    }
+}
+
+.button {
+    display: inline-block;
+    @include border-radius(7);
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &.primary {
+        color: $white;
+        background-color: $light-blue;
+    }
+    
+    &.cancel {
+        color: $white;
+        background-color: $red;
+    }    
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.border-radius-6 {
+    @include border-radius(6);
+}
+
+.border-light-green {
+    border-color: $light-green;
+}
+
+.background-light-green {
+    background-color: $light-green;
+}
+
+.rotate {
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+input {
+    border: 1px solid $light-gray;
+    @include border-radius(4);
+    padding: 0.3rem;
+
+    &:focus {
+        outline: none;
+    }
+}
