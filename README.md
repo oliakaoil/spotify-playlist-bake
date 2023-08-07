@@ -4,6 +4,15 @@ The Spotify Playlist Bake application is a React front-end which uses the Spotif
 
 https://developer.spotify.com/web-api/get-recommendations
 
+## Installation
+
+To install and run the application locally, simply install dependencies and then start the dev server:
+
+```
+$ npm install
+$ npm start
+```
+
 
 ## Further work
 
